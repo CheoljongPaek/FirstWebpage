@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { RectangleContainer } from "./RectangleLoader";
 // import aef from '../public/images/texture1'
 
@@ -9,19 +9,19 @@ const Rectangle = () => {
   const [scene] = useState(new THREE.Scene());
   const [_camera, setCamera] = useState<THREE.PerspectiveCamera>();
 
-  const handleWindowResize = useCallback(() => {
-    const container = refContainer;
-    if (container.current === undefined) {
-      console.log("handleWindowResize undefined");
+  // const handleWindowResize = useCallback(() => {
+  //   const container = refContainer;
+  //   if (container.current === undefined) {
+  //     console.log("handleWindowResize undefined");
 
-      return null;
-    }
-    if (container.current && renderer) {
-      const scW = container.current.clientWidth;
-      const scH = container.current.clientHeight;
-      renderer.setSize(scW, scH);
-    }
-  }, []);
+  //     return null;
+  //   }
+  //   if (container.current && renderer) {
+  //     const scW = container.current.clientWidth;
+  //     const scH = container.current.clientHeight;
+  //     renderer.setSize(scW, scH);
+  //   }
+  // }, []);
 
   useEffect(() => {
     const { current: container } = refContainer;
@@ -52,7 +52,7 @@ const Rectangle = () => {
 
       //Objects
       const geometry = new THREE.BoxGeometry(1, 1, 1);
-      const sphereGeometry = new THREE.SphereBufferGeometry(1, 64, 64);
+      // const sphereGeometry = new THREE.SphereBufferGeometry(1, 64, 64);
       //Materials
       const material = new THREE.MeshBasicMaterial({ color: 319795 });
       const StandardMaterial = new THREE.MeshStandardMaterial();

@@ -1,4 +1,4 @@
-import { Box, BoxProps, chakra } from "@chakra-ui/react";
+import { Box, BoxProps } from "@chakra-ui/react";
 import { Spinner } from "@chakra-ui/spinner";
 import React from "react";
 
@@ -12,18 +12,17 @@ export const RectangleSpinner = () => (
     mt="calc(0px - var(--spinner-size))"
   />
 );
-//chakra.div
-const Card = chakra("div", {
-  // attach style props
-  baseStyle: {
-    px: "4",
-    py: "5",
-    rounded: "sm",
-    shadow: "lg",
-  },
-});
+// const Card = chakra("div", {
+//   // attach style props
+//   baseStyle: {
+//     px: "4",
+//     py: "5",
+//     rounded: "sm",
+//     shadow: "lg",
+//   },
+// });
 
-type DivProps = React.HTMLProps<HTMLDivElement>;
+// type DivProps = React.HTMLProps<HTMLDivElement>;
 
 export const RectangleContainer = React.forwardRef<HTMLDivElement, BoxProps>(
   (props, ref) => (
