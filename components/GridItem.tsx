@@ -3,7 +3,6 @@ import { Text, LinkBox, LinkOverlay } from "@chakra-ui/react";
 import React from "react";
 import Image from "next/image";
 import NextLink from "next/link";
-import { Global } from "@emotion/react";
 
 interface GridItemProps {
   href: string;
