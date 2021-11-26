@@ -5,7 +5,6 @@ import gql from "graphql-tag";
 import React, { useState } from "react";
 import {
   PostSnippetFragment,
-  PostsQuery,
   useVoteMutation,
   VoteMutation,
 } from "../generated/graphql";

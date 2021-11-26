@@ -1,13 +1,12 @@
-import { Box, Flex, Link } from "@chakra-ui/layout";
+import { Box } from "@chakra-ui/layout";
 import { Button } from "@chakra-ui/react";
-import { Formik, Form } from "formik";
+import { Form, Formik } from "formik";
 import { useRouter } from "next/dist/client/router";
 import React from "react";
 import Inputfield from "../components/InputField";
 import Layout from "../components/Layout";
-import { useCreatePostMutation, useMeQuery } from "../generated/graphql";
+import { useCreatePostMutation } from "../generated/graphql";
 import { useIsAuth } from "../utils/useIsAuth";
-import { withApollo } from "../utils/withApollo";
 
 const CreatePost: React.FC<{}> = ({}) => {
   const router = useRouter();
@@ -17,7 +16,7 @@ const CreatePost: React.FC<{}> = ({}) => {
     <Layout variant="small">
       <Formik
         initialValues={{ title: "", text: "" }}
-        onSubmit={async (values, { setErrors }) => {
+        onSubmit={async (values, {}) => {
           const { errors } = await createPost({
             variables: {
               input: values,

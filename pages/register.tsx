@@ -7,7 +7,6 @@ import { Box } from "@chakra-ui/layout";
 import { MeDocument, MeQuery, useRegisterMutation } from "../generated/graphql";
 import { toErrorMap } from "../utils/toErrorMap";
 import { useRouter } from "next/dist/client/router";
-import { withApollo } from "../utils/withApollo";
 
 interface registerProps {}
 

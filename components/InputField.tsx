@@ -1,8 +1,12 @@
-import { FormControl, FormLabel, FormErrorMessage } from '@chakra-ui/form-control';
-import { Input } from '@chakra-ui/input';
-import { Textarea } from '@chakra-ui/textarea'
-import { useField } from 'formik';
-import React from 'react'
+import {
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+} from "@chakra-ui/form-control";
+import { Input } from "@chakra-ui/input";
+import { Textarea } from "@chakra-ui/textarea";
+import { useField } from "formik";
+import React from "react";
 
 interface InputFieldProps {
   name: string;
@@ -14,18 +18,18 @@ interface InputFieldProps {
 
 //1. useField(): This help me hook up inputs to Formik.
 //2. '' => false, 'abcdef' => true
-const Inputfield: React.FC<InputFieldProps> = ({ 
+const Inputfield: React.FC<InputFieldProps> = ({
   label,
   textarea,
-  ...props 
+  ...props
 }) => {
-  const [field, meta, helpers] = useField(props);
-  
+  const [field, meta] = useField(props);
+
   let InputOrTextarea;
   if (textarea) {
-    InputOrTextarea = Textarea
+    InputOrTextarea = Textarea;
   } else {
-    InputOrTextarea = Input
+    InputOrTextarea = Input;
   }
   // let InputOrTextarea = Input
   // if (props.textarea) {
@@ -36,10 +40,9 @@ const Inputfield: React.FC<InputFieldProps> = ({
     <FormControl isInvalid={!!meta.error}>
       <FormLabel htmlFor={field.name}>{label}</FormLabel>
       <InputOrTextarea {...field} {...props} id={field.name} />
-      {meta.error? <FormErrorMessage>{meta.error}</FormErrorMessage> : null}
+      {meta.error ? <FormErrorMessage>{meta.error}</FormErrorMessage> : null}
     </FormControl>
   );
-}
+};
 
-
-export default Inputfield
+export default Inputfield;

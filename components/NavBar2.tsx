@@ -1,18 +1,14 @@
-import React from "react";
-import NextLink from "next/link";
+import { useColorModeValue } from "@chakra-ui/color-mode";
+import { HamburgerIcon } from "@chakra-ui/icons";
 import {
   Box,
   Container,
   Flex,
   Heading,
-  HStack,
   Link,
   LinkProps,
 } from "@chakra-ui/layout";
-import { useColorModeValue } from "@chakra-ui/color-mode";
-import Logo from "./Logo";
 import {
-  Button,
   IconButton,
   Menu,
   MenuButton,
@@ -20,10 +16,12 @@ import {
   MenuList,
   Stack,
 } from "@chakra-ui/react";
-import { Url, UrlObject } from "url";
-import { HamburgerIcon } from "@chakra-ui/icons";
-import ThemeToggleButton from "./ThemeToggleBtn";
+import NextLink from "next/link";
+import React from "react";
 import { IoLogoGithub } from "react-icons/io5";
+import { UrlObject } from "url";
+import Logo from "./Logo";
+import ThemeToggleButton from "./ThemeToggleBtn";
 
 interface NavBar2Props {
   href?: UrlObject | string;

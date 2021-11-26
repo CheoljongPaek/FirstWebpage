@@ -5,7 +5,6 @@ import Editdeletepostbtns from "../components/EditDeletePostBtns";
 import Layout from "../components/Layout";
 import Updootsection from "../components/UpdootSection";
 import { useMeQuery, usePostsQuery } from "../generated/graphql";
-import { withApollo } from "../utils/withApollo";
 
 const Index = () => {
   const { data: meData } = useMeQuery();

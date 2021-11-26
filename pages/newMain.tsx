@@ -1,20 +1,20 @@
-import NextLink from "next/link";
+import { Button } from "@chakra-ui/button";
 import { useColorModeValue } from "@chakra-ui/color-mode";
+import { ChevronDownIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import { Image } from "@chakra-ui/image";
 import { Box, Container, Heading, Link, SimpleGrid } from "@chakra-ui/layout";
+import { List } from "@chakra-ui/react";
+import NextLink from "next/link";
 import React from "react";
+import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
+import { BioSection, BioYear } from "../components/Bio";
+import { GridItem } from "../components/GridItem";
+import MotionLayout from "../components/layouts/article";
+import ListItemBtn from "../components/ListItemBtn";
 import Paragraph from "../components/paragraph";
 import Section from "../components/section";
-import { Button } from "@chakra-ui/button";
-import { ChevronDownIcon, ChevronRightIcon } from "@chakra-ui/icons";
-import { BioSection, BioYear } from "../components/Bio";
-import { List, ListItem, ListIcon } from "@chakra-ui/react";
-import ListItemBtn from "../components/ListItemBtn";
-import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
-import { GridItem } from "../components/GridItem";
 import thumbYouTube from "../public/images/links/youtube.png";
 import thumbInkdrop from "../public/images/works/inkdrop_eyecatch.png";
-import MotionLayout from "../components/layouts/article";
 
 interface newMainProps {}
 

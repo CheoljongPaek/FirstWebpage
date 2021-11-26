@@ -1,8 +1,8 @@
 import { Box } from "@chakra-ui/layout";
-import { Text, LinkBox, LinkOverlay } from "@chakra-ui/react";
-import React from "react";
+import { LinkBox, LinkOverlay, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import NextLink from "next/link";
+import React from "react";
 
 interface GridItemProps {
   href: string;

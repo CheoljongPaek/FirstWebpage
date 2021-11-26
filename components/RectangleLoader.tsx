@@ -1,4 +1,4 @@
-import { Box, BoxProps, chakra, forwardRef } from "@chakra-ui/react";
+import { Box, BoxProps, chakra } from "@chakra-ui/react";
 import { Spinner } from "@chakra-ui/spinner";
 import React from "react";
 

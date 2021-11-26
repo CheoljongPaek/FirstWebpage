@@ -11,7 +11,7 @@ interface NavBarProps {}
 const Navbar: React.FC<NavBarProps> = ({}) => {
   const [logout, { loading: logoutFetching }] = useLogoutMutation();
   const apolloClient = useApolloClient();
-  const { client, data, loading } = useMeQuery({
+  const { data, loading } = useMeQuery({
     skip: isServer(),
     fetchPolicy: "network-only",
   });
