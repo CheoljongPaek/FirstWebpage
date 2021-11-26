@@ -1,10 +1,10 @@
 import { Box, Container } from "@chakra-ui/layout";
+import dynamic from "next/dynamic";
 import Head from "next/head";
-import React, { forwardRef } from "react";
-import { NextRouter, Router } from "next/router";
+import { Router } from "next/router";
+import React from "react";
 import Navbar2 from "../NavBar2";
 import RectangleLoader from "../RectangleLoader";
-import dynamic from "next/dynamic";
 
 interface mainProps {
   router: Router;
