@@ -2,7 +2,6 @@ import {
   theme as chakraTheme,
   extendTheme,
   ThemeConfig,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import {
   createBreakpoints,

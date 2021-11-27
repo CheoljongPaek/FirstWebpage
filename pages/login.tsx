@@ -8,7 +8,6 @@ import { MeDocument, MeQuery, useLoginMutation } from "../generated/graphql";
 import { toErrorMap } from "../utils/toErrorMap";
 import { useRouter } from "next/router";
 import NextLink from "next/link";
-import { withApollo } from "../utils/withApollo";
 
 const Login: React.FC<{}> = ({}) => {
   const router = useRouter();

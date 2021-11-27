@@ -77,6 +77,7 @@ const Rectangle = () => {
         cube.rotation.y += 0.01;
 
         renderer.render(scene, camera);
+        return null;
       };
 
       animate();
@@ -85,6 +86,10 @@ const Rectangle = () => {
         console.log("unmount");
         cancelAnimationFrame(req);
         renderer.dispose();
+      };
+    } else {
+      return () => {
+        console.log("check renderer");
       };
     }
   }, []);

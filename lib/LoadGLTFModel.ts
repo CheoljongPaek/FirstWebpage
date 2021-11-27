@@ -1,9 +1,9 @@
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import * as THREE from "three";
-import { useState } from "react";
+// import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+// import * as THREE from "three";
+// import { useState } from "react";
 
-const loader = new GLTFLoader();
-const [scene] = useState(new THREE.Scene());
+// const loader = new GLTFLoader();
+// const [scene] = useState(new THREE.Scene());
 
 const LoadGLTFModel = () => {
   console.log("loaddog");
